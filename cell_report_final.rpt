@@ -1,0 +1,38 @@
+ 
+****************************************
+Report : cell
+Design : MyDesign
+Version: K-2015.06-SP1
+Date   : Fri Nov 23 15:25:59 2018
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    p - parameterized
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+M_control_path            M_build_control                 205.6180  h, n, p
+M_data                    M_build_datapath                6291.4321 h, n, p
+U1                        INV_X8          NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm
+                                                            0.7980  
+U8                        INV_X4          NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm
+                                                            0.5320  
+comp_control              compression_control              93.8980  h, n
+comp_data                 compression_datapath            13695.0099
+                                                                    h, n
+h_store                   sram_pull2                      1813.3220 h, n, p
+hash_to_mem               sram_push                       2164.4421 h, n, p
+k_store                   sram_pull                       14070.8683
+                                                                    h, n, p
+master_control            big_controller                  117.8380  h, n
+w_data                    w_datapath                      51408.7559
+                                                                    h, n
+wcon                      w_control                       526.6800  h, n
+--------------------------------------------------------------------------------
+Total 12 cells                                            90389.1943
+1

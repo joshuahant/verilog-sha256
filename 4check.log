@@ -1,0 +1,341 @@
+ 
+****************************************
+check_design summary:
+Version:     K-2015.06-SP1
+Date:        Fri Nov 23 16:04:51 2018
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Inputs/Outputs                                                    107
+    Unconnected ports (LINT-28)                                    44
+    Constant outputs (LINT-52)                                     63
+
+Cells                                                              78
+    Connected to power or ground (LINT-32)                         78
+
+Nets                                                               57
+    Unloaded nets (LINT-2)                                         57
+--------------------------------------------------------------------------------
+
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_57' driven by pin 'M_data/M_1[448]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_56' driven by pin 'M_data/M_1[449]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_55' driven by pin 'M_data/M_1[450]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_54' driven by pin 'M_data/M_1[451]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_53' driven by pin 'M_data/M_1[452]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_52' driven by pin 'M_data/M_1[453]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_51' driven by pin 'M_data/M_1[454]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_50' driven by pin 'M_data/M_1[455]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_49' driven by pin 'M_data/M_1[456]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_48' driven by pin 'M_data/M_1[457]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_47' driven by pin 'M_data/M_1[458]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_46' driven by pin 'M_data/M_1[459]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_45' driven by pin 'M_data/M_1[460]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_44' driven by pin 'M_data/M_1[461]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_43' driven by pin 'M_data/M_1[462]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_42' driven by pin 'M_data/M_1[463]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_41' driven by pin 'M_data/M_1[464]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_40' driven by pin 'M_data/M_1[465]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_39' driven by pin 'M_data/M_1[466]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_38' driven by pin 'M_data/M_1[467]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_37' driven by pin 'M_data/M_1[468]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_36' driven by pin 'M_data/M_1[469]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_35' driven by pin 'M_data/M_1[470]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_34' driven by pin 'M_data/M_1[471]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_33' driven by pin 'M_data/M_1[472]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_32' driven by pin 'M_data/M_1[473]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_31' driven by pin 'M_data/M_1[474]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_30' driven by pin 'M_data/M_1[475]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_29' driven by pin 'M_data/M_1[476]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_28' driven by pin 'M_data/M_1[477]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_27' driven by pin 'M_data/M_1[478]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_26' driven by pin 'M_data/M_1[479]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_25' driven by pin 'M_data/M_1[480]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_24' driven by pin 'M_data/M_1[481]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_23' driven by pin 'M_data/M_1[482]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_22' driven by pin 'M_data/M_1[490]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_21' driven by pin 'M_data/M_1[491]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_20' driven by pin 'M_data/M_1[492]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_19' driven by pin 'M_data/M_1[493]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_18' driven by pin 'M_data/M_1[494]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_17' driven by pin 'M_data/M_1[495]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_16' driven by pin 'M_data/M_1[496]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_15' driven by pin 'M_data/M_1[497]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_14' driven by pin 'M_data/M_1[498]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_13' driven by pin 'M_data/M_1[499]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_12' driven by pin 'M_data/M_1[500]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_11' driven by pin 'M_data/M_1[501]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_10' driven by pin 'M_data/M_1[502]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_9' driven by pin 'M_data/M_1[503]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_8' driven by pin 'M_data/M_1[504]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_7' driven by pin 'M_data/M_1[505]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_6' driven by pin 'M_data/M_1[506]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_5' driven by pin 'M_data/M_1[507]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_4' driven by pin 'M_data/M_1[508]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_3' driven by pin 'M_data/M_1[509]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_2' driven by pin 'M_data/M_1[510]' has no loads. (LINT-2)
+Warning: In design 'MyDesign', net 'SYNOPSYS_UNCONNECTED_1' driven by pin 'M_data/M_1[511]' has no loads. (LINT-2)
+Warning: In design 'big_controller', port 'msram_con_finish' is not connected to any nets. (LINT-28)
+Warning: In design 'big_controller', port 'hsram_con_finish' is not connected to any nets. (LINT-28)
+Warning: In design 'w_datapath_DW01_add_12', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'w_datapath_DW01_add_12', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'w_datapath_DW01_add_13', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'w_datapath_DW01_add_13', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'w_datapath_DW01_add_14', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'w_datapath_DW01_add_14', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'w_datapath_DW01_add_15', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'w_datapath_DW01_add_15', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'w_datapath_DW01_add_16', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'w_datapath_DW01_add_16', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'w_datapath_DW01_add_17', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'w_datapath_DW01_add_17', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_18', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_18', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_22', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_22', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_23', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_23', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_24', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_24', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_25', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_25', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_26', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_26', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_27', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_27', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_28', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_28', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_29', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_29', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_30', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_30', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_31', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_31', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_32', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_32', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_33', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_33', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_35', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_35', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_36', port 'CI' is not connected to any nets. (LINT-28)
+Warning: In design 'compression_datapath_DW01_add_36', port 'CO' is not connected to any nets. (LINT-28)
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[511]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[510]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[509]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[508]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[507]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[506]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[505]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[504]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[503]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[502]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[501]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[500]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[499]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[498]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[497]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[496]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[495]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[494]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[493]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[492]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[491]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[490]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[482]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[481]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[480]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[479]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[478]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[477]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[476]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[475]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[474]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[473]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[472]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[471]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[470]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[469]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[468]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[467]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[466]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[465]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[464]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[463]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[462]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[461]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[460]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[459]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[458]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[457]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[456]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[455]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[454]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[453]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[452]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[451]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[450]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[449]' is connected to logic 0. 
+Warning: In design 'MyDesign', a pin on submodule 'w_data' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'M_1_to_W[448]' is connected to logic 0. 
+Warning: In design 'w_datapath', a pin on submodule 'add_1_root_add_0_root_add_1968_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'w_datapath', a pin on submodule 'add_1_root_add_0_root_add_1967_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'w_datapath', a pin on submodule 'add_1968' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'w_datapath', a pin on submodule 'add_0_root_add_0_root_add_1968_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'w_datapath', a pin on submodule 'add_1967' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'w_datapath', a pin on submodule 'add_0_root_add_0_root_add_1967_2' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_0_root_add_0_root_add_1028_3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_925' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_921' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_924' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_923' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_922' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_920' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_919' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_918' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_1_root_add_0_root_add_1031' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_1028' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_2_root_add_0_root_add_1028_3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_1_root_add_0_root_add_1028_3' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_0_root_add_0_root_add_1031' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'compression_datapath', a pin on submodule 'add_1035' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'CI' is connected to logic 0. 
+Warning: In design 'MyDesign', output port 'dut__msg__write' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'MyDesign', output port 'dut__kmem__write' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'MyDesign', output port 'dut__hmem__write' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'sram_pull', output port 'write' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'sram_pull2', output port 'write' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[511]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[510]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[509]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[508]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[507]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[506]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[505]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[504]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[503]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[502]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[501]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[500]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[499]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[498]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[497]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[496]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[495]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[494]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[493]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[492]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[491]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[490]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[482]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[481]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[480]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[479]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[478]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[477]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[476]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[475]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[474]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[473]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[472]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[471]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[470]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[469]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[468]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[467]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[466]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[465]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[464]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[463]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[462]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[461]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[460]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[459]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[458]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[457]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[456]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[455]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[454]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[453]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[452]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[451]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[450]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[449]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_datapath', output port 'M_1[448]' is connected directly to 'logic 0'. (LINT-52)
+Warning: In design 'M_build_control', output port 'write' is connected directly to 'logic 0'. (LINT-52)
+1

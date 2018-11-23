@@ -1,0 +1,542 @@
+Loading db file '/afs/eos.ncsu.edu/lockers/research/ece/wdavis/tech/nangate/NangateOpenCellLibrary_PDKv1_2_v2008_10/liberty/520/NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db'
+Loading db file '/afs/eos.ncsu.edu/software/synopsys2015/syn/libraries/syn/dw_foundation.sldb'
+Loading db file '/afs/eos.ncsu.edu/software/synopsys2015/syn/libraries/syn/gtech.db'
+Loading db file '/afs/eos.ncsu.edu/software/synopsys2015/syn/libraries/syn/standard.sldb'
+  Loading link library 'NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm'
+  Loading link library 'gtech'
+Loading sverilog file '/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v
+Warning:  /afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v:315: signed to unsigned conversion occurs. (VER-318)
+Warning:  /afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v:304: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+Warning:  /afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v:348: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
+
+Statistics for case statements in always block at line 266 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           278            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 303 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           304            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 338 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           348            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine sram_push line 248 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  dut_dom_data_reg   | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sram_push line 258 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| address_output_reg  | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sram_push line 266 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    H_capture_reg    | Flip-flop |  256  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sram_push line 327 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     enable_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| sram_fsm_state_reg  | Flip-flop |   2   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sram_push line 338 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      write_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| internal_enable_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     finish_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     address_reg     | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+|  sram_push/256   |   8    |   32    |      3       | N  |
+===========================================================
+Warning:  /afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v:428: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 416 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           417            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 453 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           464            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine sram_pull line 402 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   sram_saved_reg    | Flip-flop | 2048  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sram_pull line 443 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| address_output_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| sram_fsm_state_reg  | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sram_pull line 453 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      write_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     enable_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     finish_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| internal_enable_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| address_request_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|  data_counter_reg   | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v:556: signed to unsigned conversion occurs. (VER-318)
+
+Statistics for case statements in always block at line 544 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           545            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 581 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           592            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine sram_pull2 line 530 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   sram_saved_reg    | Flip-flop |  256  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sram_pull2 line 571 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| address_output_reg  | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+| sram_fsm_state_reg  | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine sram_pull2 line 581 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      write_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     enable_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     finish_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| internal_enable_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| address_request_reg | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|  data_counter_reg   | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 678 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           679            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 705 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           718            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine M_build_control line 657 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   go_capture_reg    | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine M_build_control line 664 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     control_reg     | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|   M_fsm_state_reg   | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine M_build_control line 705 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     finish_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      write_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     enable_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     address_reg     | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|   msg_length_reg    | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+|  state_counter_reg  | Flip-flop |   7   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 796 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           803            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine M_build_datapath line 770 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       M_1_reg       | Flip-flop |  512  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine M_build_datapath line 796 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     M_block_reg     | Flip-flop |  512  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 868 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           880            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 904 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           916            |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 940 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           952            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine compression_datapath line 868 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   H_original_reg    | Flip-flop |  256  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine compression_datapath line 904 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    H_output_reg     | Flip-flop |  256  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine compression_datapath line 940 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        h_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        a_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        b_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        c_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        d_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        e_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        f_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+|        g_reg        | Flip-flop |  32   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+====================================================================
+|     block name/line       | Inputs | Outputs | # sel inputs | MB |
+====================================================================
+| compression_datapath/1027 |   64   |   64    |      6       | N  |
+====================================================================
+
+Statistics for case statements in always block at line 1075 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1077           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1105 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1109           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine compression_control line 1064 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     c_state_reg     | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|     control_reg     | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine compression_control line 1105 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   fsm_counter_reg   | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 1180 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1181           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1237 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1248           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine big_controller line 1161 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+====================================================================================
+|      Register Name       |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+====================================================================================
+|    push_complete_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     B_fsm_state_reg      | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+|      go_capture_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|      w_complete_reg      | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+|     srams_loaded_reg     | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| compression_complete_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+====================================================================================
+
+Inferred memory devices in process
+	in routine big_controller line 1237 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| dut_xxx_finish_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| con_msram_start_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| con_hsram_start_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| con_ksram_start_reg | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| con_wcon_start_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| con_comp_start_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+| con_push_start_reg  | Flip-flop |   1   |  N  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 1395 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1397           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1426 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1440           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine w_control line 1384 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| output_control_reg  | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+|   W_fsm_state_reg   | Flip-flop |   3   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine w_control line 1426 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===================================================================================
+|      Register Name      |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===================================================================================
+|  count_minus7_odds_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| count_current_evens_reg | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| count_minus15_evens_reg | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| count_minus2_evens_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| count_minus16_evens_reg | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| count_minus7_evens_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| count_current_odds_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| count_minus15_odds_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+|  count_minus2_odds_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+| count_minus16_odds_reg  | Flip-flop |   6   |  Y  | N  | N  | N  | N  | N  | N  |
+===================================================================================
+
+Statistics for case statements in always block at line 1574 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1575           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1710 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1714           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1736 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1737           |    auto/auto     |
+===============================================
+
+Statistics for case statements in always block at line 1872 in file
+	'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           1876           |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+	in routine w_datapath line 1547 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      W_in_reg       | Flip-flop |  512  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine w_datapath line 1562 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     W_final_reg     | Flip-flop | 2048  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine w_datapath line 1710 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| W_intermediate_reg  | Flip-flop | 1024  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine w_datapath line 1872 in file
+		'/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| W_intermediate_reg  | Flip-flop | 1024  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+===========================================================
+| block name/line  | Inputs | Outputs | # sel inputs | MB |
+===========================================================
+| w_datapath/1932  |   64   |   32    |      6       | N  |
+| w_datapath/1933  |   64   |   32    |      6       | N  |
+| w_datapath/1934  |   64   |   32    |      6       | N  |
+| w_datapath/1935  |   64   |   32    |      6       | N  |
+| w_datapath/1936  |   64   |   32    |      6       | N  |
+| w_datapath/1937  |   64   |   32    |      6       | N  |
+| w_datapath/1938  |   64   |   32    |      6       | N  |
+| w_datapath/1939  |   64   |   32    |      6       | N  |
+===========================================================
+Presto compilation completed successfully.
+Current design is now '/afs/unity.ncsu.edu/users/j/jnhant/synth_564/MyDesign.db:MyDesign'
+Loaded 11 designs.
+Current design is 'MyDesign'.
+MyDesign sram_push sram_pull sram_pull2 M_build_control M_build_datapath compression_datapath compression_control big_controller w_control w_datapath
