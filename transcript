@@ -1,5 +1,5 @@
 # vsim -c -novopt tb_top 
-# Start time: 15:18:21 on Nov 23,2018
+# Start time: 18:20:41 on Nov 23,2018
 # ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # //  ModelSim SE-64 10.6c Jul 25 2017Linux 3.10.0-957.el7.x86_64
 # //
@@ -70,5 +70,5 @@
 # Store result to result_1.txt
 # ** Note: $finish    : final_tb.v(195)
 #    Time: 10335 ns  Iteration: 1  Instance: /tb_top
-# End time: 15:18:28 on Nov 23,2018, Elapsed time: 0:00:07
+# End time: 18:21:03 on Nov 23,2018, Elapsed time: 0:00:22
 # Errors: 0, Warnings: 1

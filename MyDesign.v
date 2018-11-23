@@ -336,34 +336,37 @@ always @ (posedge clock) begin
 end
 
 always @ (posedge clock) begin
-    write <= 0;
-    internal_enable <= 0;
-    address<= 'x;
-    finish <= 0;
 
-    if (reset) begin
-        address<=0;
-    end
-    else
     casex(sram_fsm_state)
         SRAM_WAIT: begin
             address<= 0;
+	    write <= 0;
+	    internal_enable <= 0;
+	    finish <= 0;
         end
         SRAM_CAPTURE: begin
             address<= 0;
             internal_enable <= 1;
+	    write <= 0;
+	    finish <= 0;
         end
         SRAM_START_STORING: begin
             internal_enable <= 1;
             write <= 1;
             address <= address+1;
+	    finish <= 0;
         end
         SRAM_FINISH: begin
             address <= 0;
             finish <= 1;
+	    write <= 0;
+	    internal_enable <= 0;
         end
         default : begin
             address <= 0;
+	    write <= 0;
+	    internal_enable <= 0;
+	    finish <= 0;
         end
     endcase
 end
@@ -453,7 +456,6 @@ end
 always @ (posedge clock) begin
     write <= 0;
     enable <= 0;
-    address_request <= 'x;
     finish <= 0;
     internal_enable <= 0;
     if (reset) begin
@@ -581,7 +583,6 @@ end
 always @ (posedge clock) begin
     write <= 0;
     enable <= 0;
-    address_request <= 'x;
     finish <= 0;
     internal_enable <= 0;
     if (reset) begin
@@ -1424,7 +1425,7 @@ always @(*) begin
 end
 
 always @ (posedge clock) begin
-    if(reset) begin
+/*    if(reset) begin
         count_current_evens <= 0;
         count_minus15_evens <= 0;
         count_minus2_evens <= 0;
@@ -1436,7 +1437,7 @@ always @ (posedge clock) begin
         count_minus16_odds <= 0;
         count_minus7_odds <= 0;
     end
-    else
+    else */
     casex(W_fsm_state)
     W_WAIT: begin
         count_current_evens <= 0;

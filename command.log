@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version K-2015.06-SP1 for linux64 -- Jul 21, 2015
-#@ # Date:   Fri Nov 23 15:18:37 2018
+#@ # Date:   Fri Nov 23 18:22:34 2018
 #@ # Run by: jnhant@engr-ras-101.eos.ncsu.edu
 #@ 
 
@@ -4011,148 +4011,209 @@ source Constraints.tcl > 2const.log
 #@ link 
 #@ # -- End source Constraints.tcl
 
-source CompileAnalyze.tcl > 3comp.log
-#@ # -- Starting source CompileAnalyze.tcl
+gui_start
+#@ # -- Starting source /afs/eos.ncsu.edu/software/synopsys2015/syn/auxx/tcllib/lib/itk3.4/itk.tcl
 
-#@ 
-#@ #---------------------------------------------------------
-#@ # Now resynthesize the design to meet constraints,     
-#@ # and try to best achieve the goal, and using the      
-#@ # CMOSX parts.  In large designs, compile can take     
-#@ # a lllooonnnnggg time!                                
 #@ #
-#@ # -map_effort specifies how much optimization effort   
-#@ # there is, i.e. low, medium, or high.                 
-#@ #		Use high to squeeze out those last picoseconds. 
-#@ # -verify_effort specifies how much effort to spend    
-#@ # making sure that the input and output designs        
-#@ # are equivalent logically                             
-#@ #---------------------------------------------------------
-#@ ##################################################
-#@ # Revision History: 01/18/2011, by Zhuo Yan
-#@ ##################################################
+#@ # itk.tcl
+#@ # ----------------------------------------------------------------------
+#@ # Invoked automatically upon startup to customize the interpreter
+#@ # for [incr Tk].
+#@ # ----------------------------------------------------------------------
+#@ #   AUTHOR:  Michael J. McLennan
+#@ #            Bell Labs Innovations for Lucent Technologies
+#@ #            mmclennan@lucent.com
+#@ #            http://www.tcltk.com/itcl
+#@ #
+#@ #      RCS:  $Id: itk.tcl,v 1.3 2002/05/14 22:53:28 davygrvy Exp $
+#@ # ----------------------------------------------------------------------
+#@ #            Copyright (c) 1993-1998  Lucent Technologies, Inc.
+#@ # ======================================================================
+#@ # See the file "license.terms" for information on usage and
+#@ # redistribution of this file, and for a DISCLAIMER OF ALL WARRANTIES.
 #@ 
-#@ compile -map_effort medium
+#@ #
+#@ # Provide transparent access to all [incr Tk] commands
+#@ #
+#@ if {$tcl_platform(os) == "MacOS"} {
+#@     source -rsrc itk:tclIndex
+#@ } else {
+#@     lappend auto_path ${itk::library}
+#@ }
 #@ 
-#@ #---------------------------------------------------------
-#@ # This is just a sanity check: Write out the design before 
-#@ # hold fixing
-#@ #---------------------------------------------------------
-#@ write -hierarchy -f verilog -o ${modname}_init.v
+#@ # ----------------------------------------------------------------------
+#@ #  USAGE:  itk::remove_destroy_hook <widget>
+#@ #
+#@ #  Used internally via "itk_component delete" when disconnecting a
+#@ #  component <widget> from the mega-widget that contains it.
+#@ #  Each component has a special binding for the <Destroy> event
+#@ #  that causes it to disconnect itself from its parent when destroyed.
+#@ #  This procedure removes the binding from the binding tag list and
+#@ #  deletes the binding.  It is much easier to implement this in
+#@ #  Tcl than C.
+#@ # ----------------------------------------------------------------------
+#@ proc ::itk::remove_destroy_hook {widget} {
+#@     if {![winfo exists $widget]} {return}
+#@     set tags [bindtags $widget]
+#@     set i [lsearch $tags "itk-destroy-$widget"]
+#@     if {$i >= 0} {
+#@         bindtags $widget [lreplace $tags $i $i]
+#@     }
+#@     bind itk-destroy-$widget <Destroy> {}
+#@ }
 #@ 
-#@ #---------------------------------------------------------
-#@ # Now trace the critical (slowest) path and see if     
-#@ # the timing works.                                    
-#@ # If the slack is NOT met, you HAVE A PROBLEM and      
-#@ # need to redesign or try some other minimization      
-#@ # tricks that Synopsys can do                          
-#@ #---------------------------------------------------------
+#@ #
+#@ # Define "usual" option-handling code for the Tk widgets:
+#@ #
+#@ itk::usual Button {
+#@     keep -background -cursor -foreground -font
+#@     keep -activebackground -activeforeground -disabledforeground
+#@     keep -highlightcolor -highlightthickness
+#@     rename -highlightbackground -background background Background
+#@ }
 #@ 
-#@ report_timing  > timing_max_slow.rpt
+#@ itk::usual Canvas {
+#@     keep -background -cursor
+#@     keep -insertbackground -insertborderwidth -insertwidth
+#@     keep -insertontime -insertofftime
+#@     keep -selectbackground -selectborderwidth -selectforeground
+#@     keep -highlightcolor -highlightthickness
+#@     rename -highlightbackground -background background Background
+#@ }
 #@ 
-#@ #---------------------------------------------------------
-#@ # This is your section to do different things to       
-#@ # improve timing or area - RTFM (Read The Manual) :)
-#@ #---------------------------------------------------------
+#@ itk::usual Checkbutton {
+#@     keep -background -cursor -foreground -font
+#@     keep -activebackground -activeforeground -disabledforeground
+#@     keep -selectcolor
+#@     keep -highlightcolor -highlightthickness
+#@     rename -highlightbackground -background background Background
+#@ }
 #@ 
-#@ #---------------------------------------------------------
-#@ # Now resynthesize the design for the fastest corner   
-#@ # making sure that hold time conditions are met        
-#@ #---------------------------------------------------------
+#@ itk::usual Entry {
+#@     keep -background -cursor -foreground -font
+#@     keep -insertbackground -insertborderwidth -insertwidth
+#@     keep -insertontime -insertofftime
+#@     keep -selectbackground -selectborderwidth -selectforeground
+#@     keep -highlightcolor -highlightthickness
+#@     rename -highlightbackground -background background Background
+#@ }
 #@ 
-#@ #---------------------------------------------------------
-#@ # Specify the fastest process corner and lowest temp   
-#@ # and highest (fastest) Vcc                            
-#@ #---------------------------------------------------------
+#@ itk::usual Frame {
+#@     keep -background -cursor
+#@ }
 #@ 
-#@ set target_library NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm.db
-#@ set link_library   NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db
-#@ set link_library   [concat  $link_library dw_foundation.sldb] 
-#@ translate
+#@ itk::usual Label {
+#@     keep -background -cursor -foreground -font
+#@     keep -highlightcolor -highlightthickness
+#@     rename -highlightbackground -background background Background
+#@ }
 #@ 
-#@ #---------------------------------------------------------
-#@ # Set the design rule to 'fix hold time violations'    
-#@ # Then compile the design again, telling Synopsys to   
-#@ # only change the design if there are hold time        
-#@ # violations.                                          
-#@ #---------------------------------------------------------
+#@ itk::usual Listbox {
+#@     keep -background -cursor -foreground -font
+#@     keep -selectbackground -selectborderwidth -selectforeground
+#@     keep -highlightcolor -highlightthickness
+#@     rename -highlightbackground -background background Background
+#@ }
 #@ 
-#@ set_fix_hold $clkname
-#@ compile -only_design_rule -incremental
-#@ #compile -prioritize_min_paths -only_hold_time
-#@ # report_timing -delay min -nworst 30 > timing_report_${modname}_min_postfix.rpt 
-#@ # report_timing -delay min -nworst 30 > timing_report_${modname}_min_postfix.rpt 
+#@ itk::usual Menu {
+#@     keep -background -cursor -foreground -font
+#@     keep -activebackground -activeforeground -disabledforeground
+#@     keep -selectcolor -tearoff
+#@ }
 #@ 
-#@ #---------------------------------------------------------
-#@ # Report the fastest path.  Make sure the hold         
-#@ # is actually met.                                     
-#@ #---------------------------------------------------------
-#@ # report_timing  > timing_max_fast_${type}.rpt
-#@ report_timing -delay min  > timing_min_fast_holdcheck_${type}.rpt
+#@ itk::usual Menubutton {
+#@     keep -background -cursor -foreground -font
+#@     keep -activebackground -activeforeground -disabledforeground
+#@     keep -highlightcolor -highlightthickness
+#@     rename -highlightbackground -background background Background
+#@ }
 #@ 
-#@ #---------------------------------------------------------
-#@ # Write out the 'fastest' (minimum) timing file        
-#@ # in Standard Delay Format.  We might use this in	    
-#@ # later verification.                                  
-#@ #---------------------------------------------------------
+#@ itk::usual Message {
+#@     keep -background -cursor -foreground -font
+#@     keep -highlightcolor -highlightthickness
+#@     rename -highlightbackground -background background Background
+#@ }
 #@ 
-#@ write_sdf counter_min.sdf
+#@ itk::usual Radiobutton {
+#@     keep -background -cursor -foreground -font
+#@     keep -activebackground -activeforeground -disabledforeground
+#@     keep -selectcolor
+#@     keep -highlightcolor -highlightthickness
+#@     rename -highlightbackground -background background Background
+#@ }
 #@ 
-#@ #---------------------------------------------------------
-#@ # Since Synopsys has to insert logic to meet hold      
-#@ # violations, we might find that we have setup         
-#@ # violations now.  So lets recheck with the slowest    
-#@ # corner, etc.                                         
-#@ #  YOU have problems if the slack is NOT MET           
-#@ # 'translate' means 'translate to new library'         
-#@ #---------------------------------------------------------
+#@ itk::usual Scale {
+#@     keep -background -cursor -foreground -font -troughcolor
+#@     keep -activebackground
+#@     keep -highlightcolor -highlightthickness
+#@     rename -highlightbackground -background background Background
+#@ }
 #@ 
-#@ set target_library NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db
-#@ set link_library   NangateOpenCellLibrary_PDKv1_2_v2008_10_slow_nldm.db
-#@ set link_library   [concat  $link_library dw_foundation.sldb]
-#@ translate
-#@ report_timing  > timing_max_slow_holdfixed_${type}.rpt
-#@ # report_timing -delay min  > timing_min_slow_holdfixed_${type}.rpt
+#@ itk::usual Scrollbar {
+#@     keep -background -cursor -troughcolor
+#@     keep -activebackground -activerelief
+#@     keep -highlightcolor -highlightthickness
+#@     rename -highlightbackground -background background Background
+#@ }
 #@ 
-#@ #---------------------------------------------------------
-#@ # Sanity checks to see if the libraries are characterized 
-#@ # correctly    
-#@ #---------------------------------------------------------
-#@ # set target_library NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm.db
-#@ # set link_library   NangateOpenCellLibrary_PDKv1_2_v2008_10_fast_nldm.db
-#@ # set link_library   [concat  $link_library dw_foundation.sldb]
-#@ # translate
-#@ # report_timing  > timing_max_fast_holdfixed_${type}.rpt
-#@ # report_timing -delay min  > timing_min_fast_holdfixed_${type}.rpt
+#@ itk::usual Text {
+#@     keep -background -cursor -foreground -font
+#@     keep -insertbackground -insertborderwidth -insertwidth
+#@     keep -insertontime -insertofftime
+#@     keep -selectbackground -selectborderwidth -selectforeground
+#@     keep -highlightcolor -highlightthickness
+#@     rename -highlightbackground -background background Background
+#@ }
 #@ 
-#@ # set target_library NangateOpenCellLibrary_PDKv1_2_v2008_10_typical_nldm.db
-#@ # set link_library   NangateOpenCellLibrary_PDKv1_2_v2008_10_typical_nldm.db
-#@ # set link_library   [concat  $link_library dw_foundation.sldb]
-#@ # translate
-#@ # report_timing  > timing_max_typ_holdfixed_${type}.rpt
-#@ # report_timing -delay min  > timing_min_typ_holdfixed_${type}.rpt
-#@ 
-#@ 
-#@ #---------------------------------------------------------
-#@ # Write out area distribution for the final design    
-#@ #---------------------------------------------------------
-#@ report_cell > cell_report_final.rpt
-#@ 
-#@ #---------------------------------------------------------
-#@ # Write out the resulting netlist in Verliog format    
-#@ #---------------------------------------------------------
-#@ change_names -rules verilog -hierarchy > fixed_names_init
-#@ write -hierarchy -f verilog -o ${modname}_final.v
-#@ # write -hierarchy -format verilog -output ${modname}_netlist_holdfixed_${type}.v #RAVI
-#@ 
-#@ #---------------------------------------------------------
-#@ # Write out the 'slowest' (maximum) timing file        
-#@ # in Standard Delay Format.  We might use this in      
-#@ # later verification.                                  
-#@ #---------------------------------------------------------
-#@ 
-#@ write_sdf counter_max.sdf
-#@ # -- End source CompileAnalyze.tcl
+#@ itk::usual Toplevel {
+#@     keep -background -cursor
+#@ }
+#@ # -- End source /afs/eos.ncsu.edu/software/synopsys2015/syn/auxx/tcllib/lib/itk3.4/itk.tcl
 
-check_design
-check_design > 4check.log
+#@ # -- Starting source /afs/eos.ncsu.edu/software/synopsys2015/syn/auxx/tcllib/lib/iwidgets4.0.2/lib/iwidgets/iwidgets.tcl
+
+#@ #
+#@ # iwidgets.tcl
+#@ # ----------------------------------------------------------------------
+#@ # Invoked automatically by [incr Tk] upon startup to initialize
+#@ # the [incr Widgets] package.
+#@ # ----------------------------------------------------------------------
+#@ #  AUTHOR: Mark L. Ulferts               EMAIL: mulferts@spd.dsccc.com
+#@ #
+#@ #  @(#) $Id: iwidgets.tcl.in,v 1.5 2007/06/10 19:28:16 hobbs Exp $
+#@ # ----------------------------------------------------------------------
+#@ #                Copyright (c) 1995  Mark L. Ulferts
+#@ # ======================================================================
+#@ # See the file "license.terms" for information on usage and
+#@ # redistribution of this file, and for a DISCLAIMER OF ALL WARRANTIES.
+#@ 
+#@ package require Tcl 8.0
+#@ package require Tk 8.0
+#@ package require Itcl 3.2
+#@ package require Itk 3.2
+#@ 
+#@ namespace eval ::iwidgets {
+#@     namespace export *
+#@ 
+#@     variable library [file dirname [info script]]
+#@     variable version 4.0.2
+#@ 
+#@     lappend auto_path $iwidgets::library
+#@     variable subdir
+#@     foreach subdir {generic scripts} {
+#@ 	if {[file isdirectory [file join $iwidgets::library $subdir]]} {
+#@ 	    lappend auto_path [file join $iwidgets::library $subdir]
+#@ 	}
+#@     }
+#@     unset subdir
+#@ }
+#@ 
+#@ package provide Iwidgets $iwidgets::version
+#@ # -- End source /afs/eos.ncsu.edu/software/synopsys2015/syn/auxx/tcllib/lib/iwidgets4.0.2/lib/iwidgets/iwidgets.tcl
+
+change_selection [get_s hash_to_mem]
+change_selection [get_s hash_to_mem/B_13]
+change_selection -add [get_s hash_to_mem/N286]
+change_selection -add [get_s hash_to_mem/N285]
+change_selection -add [get_s {{hash_to_mem/sram_fsm_state[0]}}]
+change_selection -add [get_s hash_to_mem/N271]

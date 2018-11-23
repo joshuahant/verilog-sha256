@@ -165,7 +165,7 @@ Warning: Design rule attributes from the driving cell will be
 ****************************************
 check_design summary:
 Version:     K-2015.06-SP1
-Date:        Fri Nov 23 15:19:06 2018
+Date:        Fri Nov 23 18:23:14 2018
 ****************************************
 
                    Name                                            Total
@@ -177,8 +177,8 @@ Cells                                                              13
     Cells do not drive (LINT-1)                                    13
 --------------------------------------------------------------------------------
 
-Warning: In design 'sram_push', cell 'C1211' does not drive any nets. (LINT-1)
-Warning: In design 'w_control', cell 'C308' does not drive any nets. (LINT-1)
+Warning: In design 'sram_push', cell 'B_13' does not drive any nets. (LINT-1)
+Warning: In design 'w_control', cell 'B_14' does not drive any nets. (LINT-1)
 Warning: In design 'compression_control', cell 'C201' does not drive any nets. (LINT-1)
 Warning: In design 'compression_datapath', cell 'C5345' does not drive any nets. (LINT-1)
 Warning: In design 'sram_pull', cell 'C8358' does not drive any nets. (LINT-1)
