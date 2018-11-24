@@ -117,7 +117,7 @@
 #                                                      
 #------------------------------------------------------
 
-#ungroup -flatten -all
+ungroup -flatten -all
 
 #---------------------------------------------------------
 # check the design before optimization  

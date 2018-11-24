@@ -8,7 +8,7 @@ Report : timing
         -max_paths 1
 Design : MyDesign
 Version: K-2015.06-SP1
-Date   : Fri Nov 23 15:25:41 2018
+Date   : Sat Nov 24 14:03:21 2018
 ****************************************
 
  # A fanout number of 1000 was used for high fanout net computations.
