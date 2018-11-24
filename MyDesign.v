@@ -361,13 +361,13 @@ always @ (posedge clock) begin
             finish <= 1;
 	    write <= 0;
 	    internal_enable <= 0;
-        end
+        end /*
         default : begin
             address <= 0;
 	    write <= 0;
 	    internal_enable <= 0;
 	    finish <= 0;
-        end
+        end */
     endcase
 end
 
