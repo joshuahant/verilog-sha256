@@ -1,3 +1,8 @@
+//Joshua Hant
+//SHA256 Algorithm
+//
+//Top level module
+
 module MyDesign #(
         parameter OUTPUT_LENGTH  = 8,
         parameter MAX_MESSAGE_LENGTH = 55,
@@ -34,11 +39,8 @@ module MyDesign #(
 
 
 wire [2:0] m_states;
-wire m_finish;
 wire [31:0] M_1_out [15:0];
-wire h_finish;
 wire [31:0] saved_Hs [7:0];
-wire k_finish;
 wire [31:0] saved_Ks [63:0];
 
 //big controller wires
@@ -76,6 +78,7 @@ wire  [5:0]   compression_counter;
 //compression datapath wires
 wire  [31:0]  final_H [7:0];
 
+//output to sram module
 sram_push #(.SRAM_SIZE(8))
     hash_to_mem(
     .clock(clk),
@@ -149,6 +152,7 @@ compression_datapath
     .H_output(final_H)
 );
 
+//controls all modules
 big_controller
     master_control(
     .clock(clk),
@@ -169,6 +173,7 @@ big_controller
     .dut_xxx_finish(dut__xxx__finish)
 );
 
+//gather k values
  sram_pull #(.SRAM_SIZE ( 64))
             k_store (
             .clock (clk),
@@ -182,6 +187,7 @@ big_controller
             .sram_saved (saved_Ks)
             );
 
+//gather h values
   sram_pull2 #(.SRAM_SIZE (8))
             h_store (
             .clock (clk),
@@ -217,6 +223,8 @@ big_controller
                     .finish (msram_con_finish)
                 );
 endmodule
+
+//this module is used for outputing H values
 module sram_push #(
             parameter SRAM_SIZE  = 8)
 (
@@ -361,18 +369,14 @@ always @ (posedge clock) begin
             finish <= 1;
 	    write <= 0;
 	    internal_enable <= 0;
-        end /*
-        default : begin
-            address <= 0;
-	    write <= 0;
-	    internal_enable <= 0;
-	    finish <= 0;
-        end */
+        end 
     endcase
 end
 
 
 endmodule
+
+//gather values from k_mem
 module sram_pull #(
             parameter SRAM_SIZE  = 64)
 (
@@ -390,7 +394,6 @@ module sram_pull #(
 typedef enum reg [2:0] {
                 SRAM_WAIT               = 3'b000,
                 SRAM_FIRST_REQUEST      = 3'b001,
-            //    SRAM_DELAY              = 3'b101,
                 SRAM_START_STORING      = 3'b010,
                 SRAM_FINAL_STORE        = 3'b011,
                 SRAM_FINISH             = 3'b100} fsm_state_enum;
@@ -400,6 +403,7 @@ fsm_state_enum sram_fsm_next_state;
 reg internal_enable;
 reg [7:0] address_request;
 reg [7:0] data_counter;
+
 generate
 for (genvar gvi = 0; gvi<SRAM_SIZE; gvi=gvi+1) begin : sram_saved_data
     always @ (posedge clock) begin
@@ -500,6 +504,8 @@ end
 
 endmodule
 
+//same as sram_pull
+//separated to help with design vision not liking parameters
 module sram_pull2 #(
             parameter SRAM_SIZE  = 8)
 (
@@ -517,7 +523,6 @@ module sram_pull2 #(
 typedef enum reg [2:0] {
                 SRAM_WAIT               = 3'b000,
                 SRAM_FIRST_REQUEST      = 3'b001,
-            //    SRAM_DELAY              = 3'b101,
                 SRAM_START_STORING      = 3'b010,
                 SRAM_FINAL_STORE        = 3'b011,
                 SRAM_FINISH             = 3'b100} fsm_state_enum;
@@ -527,6 +532,7 @@ fsm_state_enum sram_fsm_next_state;
 reg internal_enable;
 reg [7:0] address_request;
 reg [7:0] data_counter;
+
 generate
 for (genvar gvi = 0; gvi<SRAM_SIZE; gvi=gvi+1) begin : sram_saved_data
     always @ (posedge clock) begin
@@ -626,6 +632,8 @@ end
 
 
 endmodule
+
+//control logic for gathering and buliding the message blocks
 module M_build_control #(
                   parameter MAX_MESSAGE_LENGTH  = 55)
 
@@ -669,9 +677,10 @@ always @ (posedge clock) begin
     end
     else begin
         M_fsm_state <= M_fsm_next_state;
-        control <= M_fsm_next_state; //redundant?
+        control <= M_fsm_next_state; 
     end
 end
+
 //FSM for the M module
 //doesn't go back to a wait state so
 //if the counter stays at 0 done will always be high
@@ -696,7 +705,7 @@ always @ (*) begin
 	M_FINAL: begin
             M_fsm_next_state = M_DONE;
 	end
-        M_DONE: begin //maybe want to output with this state a finish signal
+        M_DONE: begin 
             M_fsm_next_state = M_WAIT;
         end
         default: M_fsm_next_state = M_WAIT;
@@ -749,6 +758,8 @@ end
 
 
 endmodule
+
+//module for the datapath of building the message
 module M_build_datapath #(
                   parameter MAX_MESSAGE_LENGTH  = 55)
 
@@ -794,22 +805,33 @@ assign M_intermediate[13] = M_block [95:64];
 assign M_intermediate[14] = M_block [63:32];
 assign M_intermediate[15] = M_block [31:0];
 
+reg [63:0] length_capture;
+
 always @ (posedge clock) begin
     if (reset) begin
         M_block <= 0;
+        length_capture <= 0;
         //reset M_1 in a generate block that also handles the final copy
     end
     else
 
     casex (control)
-    3'b000: M_block <= M_block; //do nothing
+    3'b000: begin
+       M_block <= M_block; //do nothing
+       length_capture<=xxx__dut__msg__length << 3;
+    end
     3'b001: begin //prepare the message
        M_block <= message_prepare;
+       length_capture<= length_capture;
     end
     3'b01x: begin
         M_block [511:64] <= new_message;
+       length_capture<= length_capture;
     end
-    default: M_block <= M_block;
+    default: begin
+       M_block <= M_block;
+       length_capture<= length_capture;
+    end
     endcase
 end
 //combinational logic for initializing the M_block
@@ -818,7 +840,7 @@ always @ (*) begin
     if (control == 3'b001) begin
         message_prepare = 0;
         message_prepare [511] = 1;
-        message_prepare [63:0] = xxx__dut__msg__length << 3; //not using a latched value
+        message_prepare [63:0] = length_capture; 
     end
     else
         message_prepare = 0;
@@ -1224,11 +1246,6 @@ always @(*) begin
         end
         FINISH: begin
              B_fsm_state_next = WAIT;
-/*            if(go_capture)
-                B_fsm_state_next = LOAD_SRAMS;
-            else
-                B_fsm_state_next = FINISH;
-*/
         end
         default:
             B_fsm_state_next = WAIT;
@@ -1425,19 +1442,6 @@ always @(*) begin
 end
 
 always @ (posedge clock) begin
-/*    if(reset) begin
-        count_current_evens <= 0;
-        count_minus15_evens <= 0;
-        count_minus2_evens <= 0;
-        count_minus16_evens <= 0;
-        count_minus7_evens <= 0;
-        count_current_odds <= 0;
-        count_minus15_odds <= 0;
-        count_minus2_odds <= 0;
-        count_minus16_odds <= 0;
-        count_minus7_odds <= 0;
-    end
-    else */
     casex(W_fsm_state)
     W_WAIT: begin
         count_current_evens <= 0;
@@ -1520,7 +1524,7 @@ module w_datapath
 (
     input wire          clock,
     input wire          reset,
-    input wire  [2:0]   fsm_control, //this might just need 2 bits
+    input wire  [2:0]   fsm_control, 
     input wire  [5:0]   fsm_count_current_evens,
     input wire  [5:0]   fsm_count_minus15_evens,
     input wire  [5:0]   fsm_count_minus2_evens,
@@ -1562,7 +1566,7 @@ generate
 for (genvar gvi=0; gvi<64; gvi=gvi+1) begin : W_output
     always @ (posedge clock) begin
         if (reset)
-            W_final[gvi] <= 0; //or x?
+            W_final[gvi] <= 0;
         else
             W_final[gvi] <= W_intermediate[gvi];
     end

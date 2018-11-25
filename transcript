@@ -1,6 +1,3 @@
-# vsim -c -novopt tb_top 
-# Start time: 08:22:25 on Nov 24,2018
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # //  ModelSim SE-64 10.6c Jul 25 2017Linux 3.10.0-957.el7.x86_64
 # //
 # //  Copyright 1991-2017 Mentor Graphics Corporation
@@ -14,33 +11,25 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# Refreshing /afs/unity.ncsu.edu/users/j/jnhant/synth_564/work.tb_top
+# vsim -novopt tb_top 
+# Start time: 10:34:19 on Nov 25,2018
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # Loading sv_std.std
 # Loading work.tb_top
-# Refreshing /afs/unity.ncsu.edu/users/j/jnhant/synth_564/work.sram
 # Loading work.sram
-# Refreshing /afs/unity.ncsu.edu/users/j/jnhant/synth_564/work.MyDesign
 # Loading work.MyDesign
-# Refreshing /afs/unity.ncsu.edu/users/j/jnhant/synth_564/work.sram_push
 # Loading work.sram_push
-# Refreshing /afs/unity.ncsu.edu/users/j/jnhant/synth_564/work.w_control
 # Loading work.w_control
-# Refreshing /afs/unity.ncsu.edu/users/j/jnhant/synth_564/work.w_datapath
 # Loading work.w_datapath
-# Refreshing /afs/unity.ncsu.edu/users/j/jnhant/synth_564/work.compression_control
 # Loading work.compression_control
-# Refreshing /afs/unity.ncsu.edu/users/j/jnhant/synth_564/work.compression_datapath
 # Loading work.compression_datapath
-# Refreshing /afs/unity.ncsu.edu/users/j/jnhant/synth_564/work.big_controller
 # Loading work.big_controller
-# Refreshing /afs/unity.ncsu.edu/users/j/jnhant/synth_564/work.sram_pull
 # Loading work.sram_pull
-# Refreshing /afs/unity.ncsu.edu/users/j/jnhant/synth_564/work.sram_pull2
 # Loading work.sram_pull2
-# Refreshing /afs/unity.ncsu.edu/users/j/jnhant/synth_564/work.M_build_datapath
 # Loading work.M_build_datapath
-# Refreshing /afs/unity.ncsu.edu/users/j/jnhant/synth_564/work.M_build_control
 # Loading work.M_build_control
+log -r *
+run -all
 # INFO::readmem : message.dat 
 # INFO::readmem : K.dat 
 # INFO::readmem : H.dat 
@@ -70,5 +59,65 @@
 # Store result to result_1.txt
 # ** Note: $finish    : final_tb.v(195)
 #    Time: 10335 ns  Iteration: 1  Instance: /tb_top
-# End time: 08:22:36 on Nov 24,2018, Elapsed time: 0:00:11
+# 1
+# Break in Module tb_top at final_tb.v line 195
+add wave -position insertpoint  \
+sim:/tb_top/dut/OUTPUT_LENGTH \
+sim:/tb_top/dut/MAX_MESSAGE_LENGTH \
+sim:/tb_top/dut/NUMBER_OF_Ks \
+sim:/tb_top/dut/NUMBER_OF_Hs \
+sim:/tb_top/dut/SYMBOL_WIDTH \
+sim:/tb_top/dut/xxx__dut__msg_length \
+sim:/tb_top/dut/dut__xxx__finish \
+sim:/tb_top/dut/xxx__dut__go \
+sim:/tb_top/dut/dut__msg__address \
+sim:/tb_top/dut/msg__dut__data \
+sim:/tb_top/dut/dut__msg__enable \
+sim:/tb_top/dut/dut__msg__write \
+sim:/tb_top/dut/dut__kmem__address \
+sim:/tb_top/dut/kmem__dut__data \
+sim:/tb_top/dut/dut__kmem__enable \
+sim:/tb_top/dut/dut__kmem__write \
+sim:/tb_top/dut/dut__hmem__address \
+sim:/tb_top/dut/hmem__dut__data \
+sim:/tb_top/dut/dut__hmem__enable \
+sim:/tb_top/dut/dut__hmem__write \
+sim:/tb_top/dut/dut__dom__address \
+sim:/tb_top/dut/dut__dom__data \
+sim:/tb_top/dut/dut__dom__enable \
+sim:/tb_top/dut/dut__dom__write \
+sim:/tb_top/dut/reset \
+sim:/tb_top/dut/clk \
+sim:/tb_top/dut/m_states \
+sim:/tb_top/dut/M_1_out \
+sim:/tb_top/dut/saved_Hs \
+sim:/tb_top/dut/saved_Ks \
+sim:/tb_top/dut/msram_con_finish \
+sim:/tb_top/dut/hsram_con_finish \
+sim:/tb_top/dut/ksram_con_finish \
+sim:/tb_top/dut/wcon_con_finish \
+sim:/tb_top/dut/comp_con_finish \
+sim:/tb_top/dut/push_con_finish \
+sim:/tb_top/dut/con_msram_start \
+sim:/tb_top/dut/con_hsram_start \
+sim:/tb_top/dut/con_ksram_start \
+sim:/tb_top/dut/con_wcon_start \
+sim:/tb_top/dut/con_comp_start \
+sim:/tb_top/dut/con_push_start \
+sim:/tb_top/dut/count_current_evens \
+sim:/tb_top/dut/count_minus15_evens \
+sim:/tb_top/dut/count_minus2_evens \
+sim:/tb_top/dut/count_minus16_evens \
+sim:/tb_top/dut/count_minus7_evens \
+sim:/tb_top/dut/count_current_odds \
+sim:/tb_top/dut/count_minus15_odds \
+sim:/tb_top/dut/count_minus2_odds \
+sim:/tb_top/dut/count_minus16_odds \
+sim:/tb_top/dut/count_minus7_odds \
+sim:/tb_top/dut/w_states \
+sim:/tb_top/dut/W_final \
+sim:/tb_top/dut/compression_states \
+sim:/tb_top/dut/compression_counter \
+sim:/tb_top/dut/final_H
+# End time: 11:55:10 on Nov 25,2018, Elapsed time: 1:20:51
 # Errors: 0, Warnings: 1
