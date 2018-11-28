@@ -1,0 +1,16 @@
+The scripts "sha256Verification.py" and "sha256VerificationPython2.py" are written based on the document from this link: https://www.researchgate.net/file.PostFileLoader.html?id=534b393ad3df3e04508b45ad&assetKey=AS%3A273514844622849%401442222429260
+
+"sha256Verification.py" is written in Python 3 and "sha256VerificationPython2.py" is written in Python 2. Please choose the script according to the Python version on the platform where you are going to run the script.
+
+The script can be used to hash custom input from the user or generate random input with a specific length.
+
+To run the script, type "python sha256Verification.py --job JOB --input INPUT"
+JOB can be specified as either "custom" or "random"
+
+When "JOB" is "custom", the script will generate the sha256 result for a user-specified input, which is "INPUT". For example, to generate the sha256 result for "ece564", type "python sha256Verification.py --job custom --input ece564"
+
+When "JOB" is "random", the script will generate the sha256 result for a randomly-generated input. The input is composed of letters, digits, and white spaces, and its length is specified by "INPUT". For example, to generate the sha256 result for a 15-character randomly-generated string, type "python sha256Verification.py --job random --input 15"
+
+Since the output of the script is long, it is suggested to direct the output to a file, e.g. python sha256Verification.py --job custom --input ece564 > output.txt
+
+The script also generates the message.dat file that is needed to be read into the SRAM.

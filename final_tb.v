@@ -13,7 +13,7 @@
 //`define ECE464
 // All students
 // - set based on your message memory depth
-`define MSG_LENGTH 5
+`define MSG_LENGTH 28 
 
 // synopsys translate_off
 /*
@@ -37,7 +37,7 @@
 // Tesbench
 // - instantiate the DUT and testbench
 
-module tb_top ();
+module jnhant_tb_top ();
 
 
   parameter CLK_PHASE=5  ;
@@ -100,7 +100,7 @@ module tb_top ();
 
   sram  #(.ADDR_WIDTH    ($clog2(MAX_MESSAGE_LENGTH)),
           .DATA_WIDTH    (SYMBOL_WIDTH              ),
-          .MEM_INIT_FILE ("message.dat"             ))
+          .MEM_INIT_FILE ("message28.dat"             ))
          msg_mem  (
           .address      ( dut__msg__address  ),
           .write_data   ( {SYMBOL_WIDTH {1'b0}}),

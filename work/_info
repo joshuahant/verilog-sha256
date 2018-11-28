@@ -10,25 +10,25 @@ cModel Technology
 Z0 d/afs/unity.ncsu.edu/users/j/jnhant/synth_564
 vbig_controller
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1543154688
+Z2 !s110 1543442054
 !i10b 1
-!s100 Ikj]G@Q7_gZT_>V23KHd92
-I4[bnff7@QC4`[CL32hgnK3
+!s100 `5og9fZ4EXPnleWXDGOJ:3
+Inz5CBDSFli_]FnA6U[jkV1
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 !s105 MyDesign_v_unit
 S1
 R0
-Z5 w1543154576
+Z5 w1543442044
 Z6 8MyDesign.v
 Z7 FMyDesign.v
-L0 1145
+L0 1151
 Z8 OL;L;10.6c;65
 r1
 !s85 0
 31
-Z9 !s108 1543154687.000000
-!s107 sram.v|MyDesign.v|final_tb.v|
-Z10 !s90 -sv|final_tb.v|MyDesign.v|sram.v|
+Z9 !s108 1543442054.000000
+!s107 sram.v|MyDesign.v|final_tb.v|ece564_project_tb_top.v|
+Z10 !s90 -sv|ece564_project_tb_top.v|final_tb.v|MyDesign.v|sram.v|
 !i113 1
 o-sv
 Z11 tCvgOpt 0
@@ -36,8 +36,8 @@ vcompression_control
 R1
 R2
 !i10b 1
-!s100 ><QF>75>=mAgH4QiOa6iZ0
-I9Q]emX<5oe5KQzB@h`b@D2
+!s100 Ge]l08VfCD5kAORAL]@Fi0
+I2R?H0d]k9bi0zP`[O^_0R1
 R3
 R4
 S1
@@ -45,13 +45,13 @@ R0
 R5
 R6
 R7
-L0 1064
+L0 1070
 R8
 r1
 !s85 0
 31
 R9
-Z12 !s107 sram.v|MyDesign.v|final_tb.v|
+Z12 !s107 sram.v|MyDesign.v|final_tb.v|ece564_project_tb_top.v|
 R10
 !i113 1
 o-sv
@@ -60,8 +60,8 @@ vcompression_datapath
 R1
 R2
 !i10b 1
-!s100 NEbNzXB3bU@1d=D0lWmGa2
-IZ4TikKM_lE?z<e_Qz:;aJ0
+!s100 Ya<Y_Rmh^DhVe1G2S9z^[3
+IJ_6;H=V`^OXjMSRLmKdTP3
 R3
 R4
 S1
@@ -69,7 +69,7 @@ R0
 R5
 R6
 R7
-L0 862
+L0 868
 R8
 r1
 !s85 0
@@ -455,12 +455,36 @@ R20
 R21
 R11
 ncompression_datapath_@d@w01_add_36
+vjnhant_tb_top
+R1
+R2
+!i10b 1
+!s100 Zkcf:0bDd59ggK>ZISVL`0
+INI1Kn4DklG0E[[NL=ZN5Z0
+R3
+!s105 final_tb_v_unit
+S1
+R0
+w1543432894
+8final_tb.v
+Ffinal_tb.v
+L0 40
+R8
+r1
+!s85 0
+31
+R9
+R12
+R10
+!i113 1
+o-sv
+R11
 vM_build_control
 R1
 R2
 !i10b 1
-!s100 PZ5jhGXnBiZEJJoX55VjG2
-IgF@^dZH?W<]lo]IajgIL02
+!s100 nbV5cFD5QT9VIhQZz?bhL1
+I_6_BNNPh2EE<:XkK97FbP0
 R3
 R4
 S1
@@ -484,8 +508,8 @@ vM_build_datapath
 R1
 R2
 !i10b 1
-!s100 V4Hz35nCV=>hlJhB?``;L1
-IdWBjV3MkTHj@G35fK?czR3
+!s100 k]PK8GREN@;a`P[6nCaM02
+IQYONb?SmTHGaK2cT9X@4:3
 R3
 R4
 S1
@@ -493,7 +517,7 @@ R0
 R5
 R6
 R7
-L0 763
+L0 769
 R8
 r1
 !s85 0
@@ -1139,7 +1163,7 @@ R3
 !s105 sram_v_unit
 S1
 R0
-Z28 w1542982563
+w1542982563
 8sram.v
 Fsram.v
 L0 16
@@ -1329,16 +1353,16 @@ vtb_top
 R1
 R2
 !i10b 1
-!s100 ]Y>nc_<KY2G^29d=lWMm;2
-IVf2CTYgcnO0IOibFD7=Um3
+!s100 cg2n5>24T[ChXQi87l<da1
+IImf9;?RXV8>1i^fjTRCiB0
 R3
-!s105 final_tb_v_unit
+!s105 ece564_project_tb_top_v_unit
 S1
 R0
-R28
-8final_tb.v
-Ffinal_tb.v
-L0 40
+w1543431434
+8ece564_project_tb_top.v
+Fece564_project_tb_top.v
+L0 39
 R8
 r1
 !s85 0
@@ -1353,8 +1377,8 @@ vw_control
 R1
 R2
 !i10b 1
-!s100 V@F2B^GE3ZAH<hX4M^nYW1
-I@?^>c[=noUTJ>_cP^e2V`0
+!s100 jDRO4]F0RXC35PZkcIkDA3
+I9k@lOa]]E>4nJBHeTdVUg0
 R3
 R4
 S1
@@ -1362,7 +1386,7 @@ R0
 R5
 R6
 R7
-L0 1373
+L0 1379
 R8
 r1
 !s85 0
@@ -1377,8 +1401,8 @@ vw_datapath
 R1
 R2
 !i10b 1
-!s100 >j9=VkQ@;>mG]O]INeJYb3
-ImLG[z:58fKRLDTDI44>?k1
+!s100 4K330bK5m=B6M2EAOA1^i0
+Ijb]P5X`T>z]3F4;Fb`Qcd0
 R3
 R4
 S1
@@ -1386,7 +1410,7 @@ R0
 R5
 R6
 R7
-L0 1523
+L0 1529
 R8
 r1
 !s85 0
@@ -1399,7 +1423,7 @@ o-sv
 R11
 vw_datapath_DW01_add_12
 R1
-Z29 !s110 1543009647
+Z28 !s110 1543009647
 !i10b 1
 !s100 iGLkONO1S7;g3Ma=@n[dW3
 ISMBLoihYmGMRh>FfFI_<g3
@@ -1424,7 +1448,7 @@ R11
 nw_datapath_@d@w01_add_12
 vw_datapath_DW01_add_13
 R1
-R29
+R28
 !i10b 1
 !s100 nz58N81hZTQffCK4l<:;n1
 I8diCTH@n6<:5M4L<=GVFf1
@@ -1449,7 +1473,7 @@ R11
 nw_datapath_@d@w01_add_13
 vw_datapath_DW01_add_14
 R1
-R29
+R28
 !i10b 1
 !s100 <knck>HjPGi<=fgSzhznz1
 I3eT3V^m0K98E?3mMccXE_0
@@ -1474,7 +1498,7 @@ R11
 nw_datapath_@d@w01_add_14
 vw_datapath_DW01_add_15
 R1
-R29
+R28
 !i10b 1
 !s100 hfRo3`gTk=gzSQf0fP>om0
 Ic5nOJ=KzgOj?XJdW791S=2
@@ -1499,7 +1523,7 @@ R11
 nw_datapath_@d@w01_add_15
 vw_datapath_DW01_add_16
 R1
-R29
+R28
 !i10b 1
 !s100 3;edWB?Fo5XX6eR370lOK2
 If7QTM_dd<CO9d937f_ikb0
@@ -1524,7 +1548,7 @@ R11
 nw_datapath_@d@w01_add_16
 vw_datapath_DW01_add_17
 R1
-R29
+R28
 !i10b 1
 !s100 2ZVnzUkH?7ZRoBLH0YOlZ0
 IV?kc7h:GHikRjWCONR>]50

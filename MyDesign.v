@@ -694,7 +694,10 @@ always @ (*) begin
                 M_fsm_next_state = M_WAIT;
         end
         M_PREP: begin
-            M_fsm_next_state = M_ADD;
+           if (state_counter == 0 )
+                M_fsm_next_state = M_FINAL;
+           else 
+                M_fsm_next_state = M_ADD;
         end
         M_ADD: begin
             if (state_counter == 0)
@@ -735,14 +738,17 @@ always @ (posedge clock) begin
             end
         end
         M_PREP: begin
-            state_counter<= state_counter -1;
+            if(state_counter == 0)
+                state_counter <= 0;
+            else
+                state_counter<= state_counter -1;
             enable <= 1;
             address <= state_counter;
         end
         M_ADD: begin
             enable <= 1;
             address <= state_counter;
-            state_counter<= state_counter -1;
+	    state_counter<= state_counter -1;
         end
     	M_FINAL:
 	    state_counter <= state_counter;
@@ -791,7 +797,7 @@ endgenerate
 assign M_intermediate[0] = M_block [511:480];
 assign M_intermediate[1] = M_block [479:448];
 assign M_intermediate[2] = M_block [447:416];
-assign M_intermediate[3] = M_block [415:382];
+assign M_intermediate[3] = M_block [415:384];
 assign M_intermediate[4] = M_block [383:352];
 assign M_intermediate[5] = M_block [351:320];
 assign M_intermediate[6] = M_block [319:288];

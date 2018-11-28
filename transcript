@@ -1,3 +1,6 @@
+# vsim -c -novopt tb_top 
+# Start time: 16:54:19 on Nov 28,2018
+# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # //  ModelSim SE-64 10.6c Jul 25 2017Linux 3.10.0-957.el7.x86_64
 # //
 # //  Copyright 1991-2017 Mentor Graphics Corporation
@@ -11,9 +14,6 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# vsim -novopt tb_top 
-# Start time: 10:34:19 on Nov 25,2018
-# ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # Loading sv_std.std
 # Loading work.tb_top
 # Loading work.sram
@@ -28,96 +28,79 @@
 # Loading work.sram_pull2
 # Loading work.M_build_datapath
 # Loading work.M_build_control
-log -r *
-run -all
 # INFO::readmem : message.dat 
 # INFO::readmem : K.dat 
 # INFO::readmem : H.dat 
-# @315, go asserted
-# Hash[0] = 53a2b558
-# Hash[1] = 47a6c7e5
-# Hash[2] = c4eede90
-# Hash[3] = 20f9804f
-# Hash[4] = 7a780b5e
-# Hash[5] = 05eb299c
-# Hash[6] = 6660a67d
-# Hash[7] = b0e6ad74
-# Hash[0] = 53a2b558
-# @2415, dut finished, # of clocks = 209
+# INFO::readmem : message1.dat 
+# @355, go asserted
+# Hash[0] = fcb5f40d
+# Hash[1] = f9be6bae
+# Hash[2] = 66c1d77a
+# Hash[3] = 6c159688
+# Hash[4] = 66a9e6cb
+# Hash[5] = d7314ca4
+# Hash[6] = 32b019d1
+# Hash[7] = 7392f6f4
+# Hash[0] = fcb5f40d
+# @2455, dut finished, # of clocks = 209
 # Store result to result_0.txt
-# @5335, go asserted
-# Hash[0] = 53a2b558
-# Hash[1] = 47a6c7e5
-# Hash[2] = c4eede90
-# Hash[3] = 20f9804f
-# Hash[4] = 7a780b5e
-# Hash[5] = 05eb299c
-# Hash[6] = 6660a67d
-# Hash[7] = b0e6ad74
-# Hash[0] = 53a2b558
-# @7435, dut finished, # of clocks = 209
+# INFO::readmem : message27.dat 
+# @2515, go asserted
+# Hash[0] = 7c014dfa
+# Hash[1] = c27b2491
+# Hash[2] = 062e1b10
+# Hash[3] = 90dbe906
+# Hash[4] = 05dd15f4
+# Hash[5] = 828a0880
+# Hash[6] = 9adc888e
+# Hash[7] = 40e93c7b
+# Hash[0] = 7c014dfa
+# @4615, dut finished, # of clocks = 209
 # Store result to result_1.txt
-# ** Note: $finish    : final_tb.v(195)
-#    Time: 10335 ns  Iteration: 1  Instance: /tb_top
-# 1
-# Break in Module tb_top at final_tb.v line 195
-add wave -position insertpoint  \
-sim:/tb_top/dut/OUTPUT_LENGTH \
-sim:/tb_top/dut/MAX_MESSAGE_LENGTH \
-sim:/tb_top/dut/NUMBER_OF_Ks \
-sim:/tb_top/dut/NUMBER_OF_Hs \
-sim:/tb_top/dut/SYMBOL_WIDTH \
-sim:/tb_top/dut/xxx__dut__msg_length \
-sim:/tb_top/dut/dut__xxx__finish \
-sim:/tb_top/dut/xxx__dut__go \
-sim:/tb_top/dut/dut__msg__address \
-sim:/tb_top/dut/msg__dut__data \
-sim:/tb_top/dut/dut__msg__enable \
-sim:/tb_top/dut/dut__msg__write \
-sim:/tb_top/dut/dut__kmem__address \
-sim:/tb_top/dut/kmem__dut__data \
-sim:/tb_top/dut/dut__kmem__enable \
-sim:/tb_top/dut/dut__kmem__write \
-sim:/tb_top/dut/dut__hmem__address \
-sim:/tb_top/dut/hmem__dut__data \
-sim:/tb_top/dut/dut__hmem__enable \
-sim:/tb_top/dut/dut__hmem__write \
-sim:/tb_top/dut/dut__dom__address \
-sim:/tb_top/dut/dut__dom__data \
-sim:/tb_top/dut/dut__dom__enable \
-sim:/tb_top/dut/dut__dom__write \
-sim:/tb_top/dut/reset \
-sim:/tb_top/dut/clk \
-sim:/tb_top/dut/m_states \
-sim:/tb_top/dut/M_1_out \
-sim:/tb_top/dut/saved_Hs \
-sim:/tb_top/dut/saved_Ks \
-sim:/tb_top/dut/msram_con_finish \
-sim:/tb_top/dut/hsram_con_finish \
-sim:/tb_top/dut/ksram_con_finish \
-sim:/tb_top/dut/wcon_con_finish \
-sim:/tb_top/dut/comp_con_finish \
-sim:/tb_top/dut/push_con_finish \
-sim:/tb_top/dut/con_msram_start \
-sim:/tb_top/dut/con_hsram_start \
-sim:/tb_top/dut/con_ksram_start \
-sim:/tb_top/dut/con_wcon_start \
-sim:/tb_top/dut/con_comp_start \
-sim:/tb_top/dut/con_push_start \
-sim:/tb_top/dut/count_current_evens \
-sim:/tb_top/dut/count_minus15_evens \
-sim:/tb_top/dut/count_minus2_evens \
-sim:/tb_top/dut/count_minus16_evens \
-sim:/tb_top/dut/count_minus7_evens \
-sim:/tb_top/dut/count_current_odds \
-sim:/tb_top/dut/count_minus15_odds \
-sim:/tb_top/dut/count_minus2_odds \
-sim:/tb_top/dut/count_minus16_odds \
-sim:/tb_top/dut/count_minus7_odds \
-sim:/tb_top/dut/w_states \
-sim:/tb_top/dut/W_final \
-sim:/tb_top/dut/compression_states \
-sim:/tb_top/dut/compression_counter \
-sim:/tb_top/dut/final_H
-# End time: 11:55:10 on Nov 25,2018, Elapsed time: 1:20:51
+# INFO::readmem : message55.dat 
+# @4675, go asserted
+# Hash[0] = 65b28aba
+# Hash[1] = c567bdb8
+# Hash[2] = 980e0365
+# Hash[3] = de8610ff
+# Hash[4] = 1522f003
+# Hash[5] = 37a57fe5
+# Hash[6] = 79f3abc6
+# Hash[7] = bf1e68ca
+# Hash[0] = 65b28aba
+# @6775, dut finished, # of clocks = 209
+# Store result to result_2.txt
+# @7985, go asserted
+# Hash[0] = 65b28aba
+# Hash[1] = c567bdb8
+# Hash[2] = 980e0365
+# Hash[3] = de8610ff
+# Hash[4] = 1522f003
+# Hash[5] = 37a57fe5
+# Hash[6] = 79f3abc6
+# Hash[7] = bf1e68ca
+# Hash[0] = 65b28aba
+# @10085, dut finished, # of clocks = 209
+# Store result to result_3.txt
+# @11285, go asserted
+# @11585, Extra go during processing
+# Hash[0] = 65b28aba
+# Hash[1] = c567bdb8
+# Hash[2] = 980e0365
+# Hash[3] = de8610ff
+# Hash[4] = 1522f003
+# Hash[5] = 37a57fe5
+# Hash[6] = 79f3abc6
+# Hash[7] = bf1e68ca
+# Hash[0] = 65b28aba
+# @13385, dut finished, # of clocks = 209
+# Store result to result_4.txt
+# @14375, ERROR:Extra go caused change in number of clocks : expected 209, got 210
+# @15375, INFO:The total number of clocks for reporting is 627
+# *****************
+# ***** ERROR *****
+# *****************
+# ** Note: $finish    : ece564_project_tb_top.v(319)
+#    Time: 15375 ns  Iteration: 1  Instance: /tb_top
+# End time: 16:54:21 on Nov 28,2018, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 1

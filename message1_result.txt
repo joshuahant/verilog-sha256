@@ -1,0 +1,11 @@
+// memory data file (do not edit the following line - required for mem load use)
+// instance=/tb_top/dom_mem/mem
+// format=hex addressradix=h dataradix=h version=1.0 wordsperline=1
+ @00000000 fcb5f40d
+ @00000001 f9be6bae
+ @00000002 66c1d77a
+ @00000003 6c159688
+ @00000004 66a9e6cb
+ @00000005 d7314ca4
+ @00000006 32b019d1
+ @00000007 7392f6f4
